@@ -1,0 +1,18 @@
+name: "💡 Vorschlag / Suggestion"
+description: "Eine Idee oder ein Wunsch für eine spätere Version. / An idea for a future version."
+title: "[Vorschlag] "
+labels: ["vorschlag"]
+body:
+  - type: textarea
+    id: idee
+    attributes:
+      label: "Was wünschst du dir? / What would you like?"
+    validations:
+      required: true
+  - type: textarea
+    id: warum
+    attributes:
+      label: "Wofür brauchst du das? / Why?"
+      description: "Hilft beim Einordnen, z. B. „Ich baue gern große Fabriken ohne Kabel“."
+    validations:
+      required: false
