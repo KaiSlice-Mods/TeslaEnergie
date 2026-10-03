@@ -1,0 +1,65 @@
+name: "🐞 Fehler melden / Bug report"
+description: "Etwas funktioniert nicht wie beschrieben. / Something does not work as described."
+title: "[Fehler] "
+labels: ["fehler"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke für die Meldung! Je genauer, desto schneller lässt sich der Fehler finden.
+        *Thanks for reporting! English is welcome.*
+  - type: textarea
+    id: was
+    attributes:
+      label: "Was ist passiert? / What happened?"
+      description: "Was hast du gemacht, was hast du erwartet, was ist stattdessen passiert?"
+      placeholder: "Ich habe einen Slave-Turm neben einen Master gebaut, aber es entstand kein Strahl ..."
+    validations:
+      required: true
+  - type: textarea
+    id: schritte
+    attributes:
+      label: "Wie kann man es nachstellen? / Steps to reproduce"
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: false
+  - type: input
+    id: modversion
+    attributes:
+      label: "Mod-Version / Mod version"
+      description: "Steht im Mod Manager, z. B. 1.0.0"
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: spielart
+    attributes:
+      label: "Wie wird gespielt? / How do you play?"
+      options:
+        - "Einzelspieler / Singleplayer"
+        - "Mehrspieler, ich bin Gastgeber / Multiplayer, I am the host"
+        - "Dedicated Server (Windows)"
+        - "Dedicated Server (Linux)"
+        - "Weiß ich nicht / Don't know"
+    validations:
+      required: true
+  - type: textarea
+    id: andere_mods
+    attributes:
+      label: "Andere Mods / Other mods"
+      description: "Welche anderen Mods sind installiert? (optional)"
+    validations:
+      required: false
+  - type: textarea
+    id: log
+    attributes:
+      label: "Logdatei / Log file"
+      description: |
+        Am besten die Datei `FactoryGame.log` hier hineinziehen.
+        Sie liegt unter `%LOCALAPPDATA%\FactoryGame\Saved\Logs\`.
+        Bitte vorher kurz hineinschauen: Sie kann deinen Windows-Benutzernamen enthalten.
+    validations:
+      required: false
